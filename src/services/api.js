@@ -2,21 +2,22 @@
 
 const getApiData = (filterSelect) => {
   return fetch(`http://hp-api.herokuapp.com/api/characters/house/${filterSelect}`)
-  .then(response=> response.json())
-  .then((data) => {
-    const cleanData = data.map((character)=>{
-      return {
-      name: character.name,
-      image: character.image,
-      species: character.species,
-      house: character.house,
-      status: character.alive,
-      gender: character.gender,
-      alternateNames: character.alternate_names
-    } 
-  });
- return cleanData;
-  })
-}
+    .then((response) => response.json())
+    .then((data) => {
+      const cleanData = data.map((character) => {
+        return {
+          id: `${character.house + character.name}`,
+          name: character.name,
+          image: character.image,
+          species: character.species,
+          house: character.house,
+          status: character.alive,
+          gender: character.gender,
+          alternateNames: character.alternate_names,
+        };
+      });
+      return cleanData;
+    });
+};
 
 export default getApiData;

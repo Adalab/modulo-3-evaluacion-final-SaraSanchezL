@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
-const Character = (props) => {
+import { Link } from "react-router-dom";
+function CharacterDetail(props) {
   const getSpicies = () => {
     if (props.character.species === "human") {
       return "Humano";
@@ -13,8 +12,14 @@ const Character = (props) => {
     }
   };
 
+  const getGender = () => {
+    return props.character.gender === "female" ? "Mujer" : " Hombre";
+  };
+
   return (
-    <>
+    <section>
+      <Link to="/"> Volver al inicio</Link>
+      <h2>Detalle del Personaje</h2>
       <img
         src={
           props.character.image === ""
@@ -24,10 +29,12 @@ const Character = (props) => {
         alt={`Foto de ${props.character.name}`}
       />
       <p>{props.character.name}</p>
+      <p>Estatus: {props.character.status ? "Vivo" : "Muerto"}</p>
       <p>Especie: {getSpicies()}</p>
-      <Link to={`/character/${props.character.id}`}>Más detalles</Link>
-    </>
+      <p>Género: {getGender()}</p>
+      <p>Casa: {props.character.house}</p>
+      <p>{props.character.alternateNames}</p>
+    </section>
   );
-};
-
-export default Character;
+}
+export default CharacterDetail;
