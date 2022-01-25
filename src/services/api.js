@@ -1,7 +1,7 @@
 // Fichero src/services/api.js
 
-const getApiData = () => {
-  return fetch("http://hp-api.herokuapp.com/api/characters/house/gryffindor")
+const getApiData = (filterSelect) => {
+  return fetch(`http://hp-api.herokuapp.com/api/characters/house/${filterSelect}`)
   .then(response=> response.json())
   .then((data) => {
     const cleanData = data.map((character)=>{
