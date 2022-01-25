@@ -1,12 +1,15 @@
 import "../styles/App.scss";
-import getApiData from "../services/api";
 import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import Logo from "../images/title-logo.png";
+//Images
+import Logo from "../images/logoHP.png";
+//Components
+import getApiData from "../services/api";
 import CharactersList from "./CharactersList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-import CharacterNotFound from "./CharacterNotFound";
+import DetailsNotFound from "./DetailsNotFound";
+import MessageNotResults from "./MessageNotResults";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -16,6 +19,7 @@ function App() {
   useEffect(() => {
     getApiData(filterSelect).then((response) => {
       setCharacters(response);
+      console.log(response);
     });
   }, [filterSelect]);
 
@@ -28,7 +32,7 @@ function App() {
   };
 
   const filteredCharacter = characters
-    .filter((character) => character.name.toLowerCase().includes(filterName))
+    .filter((character) => character.name.toLowerCase().includes(filterName) || character.gender.toLowerCase().includes(filterName))
     .filter((houseCharacter) => houseCharacter.house === filterSelect);
 
   const renderCharacterDetail = (props) => {
@@ -37,7 +41,7 @@ function App() {
       (character) => character.id === routeID
     );
     if (foundCharacter === undefined) {
-      return <CharacterNotFound />;
+      return <DetailsNotFound />;
     } else {
       return <CharacterDetail character={foundCharacter} />;
     }
@@ -52,7 +56,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={Logo} alt="Harry Potter Logo" />
+        <img src={Logo} alt="Harry Potter Logo" className="logoHeader" />
       </header>
 
       <main>
@@ -67,6 +71,10 @@ function App() {
             />
 
             <CharactersList characters={filteredCharacter} />
+            <MessageNotResults
+              filteredCharacter={filteredCharacter}
+              filterName={filterName}
+            />
           </Route>
 
           <Route

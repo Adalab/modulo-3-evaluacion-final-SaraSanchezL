@@ -18,7 +18,7 @@ const Character = (props) => {
       <img
         src={
           props.character.image === ""
-            ? `https://via.placeholder.com/300x300/0000FF/ffffff/?text=${props.character.name}`
+            ? `https://via.placeholder.com/300x300/000000/ffffff/?text=${props.character.name}`
             : props.character.image
         }
         alt={`Foto de ${props.character.name}`}
