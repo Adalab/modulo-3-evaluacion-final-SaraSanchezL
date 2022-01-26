@@ -2,6 +2,7 @@ import "../styles/Filters.scss";
 import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 import FilterGender from "./FilterGender";
+import FilterSpecies from "./FilterSpecies";
 
 const Filters = (props) => {
   const handleForm = (ev) => ev.preventDefault();
@@ -20,6 +21,11 @@ const Filters = (props) => {
 
       <FilterGender
         filterGender={props.filterGender}
+        handleFilter={props.handleFilter}
+      />
+
+      <FilterSpecies
+        filterSpecies={props.filterSpecies}
         handleFilter={props.handleFilter}
       />
     </form>

@@ -1,6 +1,9 @@
 import "../styles/App.scss";
 import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
+//Icons
+import { ImMagicWand } from "react-icons/im";
+import { GiMagicBroom } from "react-icons/gi";
 //Components
 import getApiData from "../services/api";
 import CharactersList from "./CharactersList";
@@ -14,6 +17,7 @@ function App() {
   const [filterName, setFilterName] = useState("");
   const [filterSelect, setFilterSelect] = useState("Gryffindor");
   const [filterGender, setFilterGender] = useState("all");
+  const [filterSpecies, setFilterSpecies] = useState("any");
 
   useEffect(() => {
     getApiData(filterSelect).then((response) => {
@@ -28,8 +32,15 @@ function App() {
       setFilterSelect(data.value);
     } else if (data.key === "gender") {
       setFilterGender(data.value);
+    } else if (data.key === "species") {
+      setFilterSpecies(data.value);
     }
   };
+
+  function SortArray(x, y) {
+    return x.name.localeCompare(y.name);
+  }
+  characters.sort(SortArray);
 
   const filteredCharacter = characters
     .filter((character) =>
@@ -39,6 +50,10 @@ function App() {
     .filter(
       (genderCharacter) =>
         filterGender === "all" || filterGender === genderCharacter.gender
+    )
+    .filter(
+      (specieCharacter) =>
+        filterSpecies === "any" || filterSpecies === specieCharacter.species
     );
 
   const renderCharacterDetail = (props) => {
@@ -58,11 +73,16 @@ function App() {
     setFilterSelect("Gryffindor");
     setFilterName("");
     setFilterGender("all");
+    setFilterSpecies("any");
   };
 
   return (
     <div className="App">
-      <header className="header"></header>
+      <header className="header">
+        <h1 className="mainTitle">
+          <ImMagicWand /> Buscador de Personajes: Harry Potter <GiMagicBroom />
+        </h1>
+      </header>
 
       <main className="main">
         <Switch>
@@ -72,6 +92,7 @@ function App() {
               handleFilter={handleFilter}
               filterSelect={filterSelect}
               filterGender={filterGender}
+              filterSpecies={filterSpecies}
             />
 
             <button className="btnReset" onClick={handleBtnReset}>

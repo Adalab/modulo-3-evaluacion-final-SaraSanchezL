@@ -12,7 +12,9 @@ const CharactersList = (props) => {
 
   return (
     <section className="section">
-      <h2 className="titleResults">Lista de resultados</h2>
+      <h2 className="titleResults">
+        Lista de resultados (ordenados alfabéticamente):
+      </h2>
       <ul className="list">{character}</ul>
     </section>
   );

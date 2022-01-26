@@ -17,12 +17,20 @@ body {
 
 .header {
   width: 100vw;
-  height: 200px;
   background-color: black;
-  background-image: url(../images/logoHP.png);
-  background-position: center;
+  background-image: url(../images/logo-hp.jpg);
+  background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.mainTitle {
+  color: gold;
+  font-size: 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
 }
 
 .btnReset {
@@ -32,6 +40,7 @@ body {
   height: 30px;
   border-radius: 20%;
   margin: 10px;
+  cursor: pointer;
 }
 
 .textNotFound {
