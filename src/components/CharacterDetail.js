@@ -9,7 +9,7 @@ import huffepuffIcon from "../images/hufflepuffIcon.jpg";
 import { FaHeartbeat } from "react-icons/fa";
 import { GiDeadHead } from "react-icons/gi";
 import { GiGiant } from "react-icons/gi";
-import { BiGhost } from "react-icons/bi";
+import { RiGhostFill } from "react-icons/ri";
 import { GiWerewolf } from "react-icons/gi";
 import { FaUser } from "react-icons/fa";
 
@@ -30,7 +30,7 @@ function CharacterDetail(props) {
     } else if (props.character.species === "ghost") {
       return (
         <p className="infoDetails">
-          Especie: Fantasma - <BiGhost className="speciesIcon" />
+          Especie: Fantasma - <RiGhostFill className="speciesIcon" />
         </p>
       );
     } else if (props.character.species === "werewolf") {
