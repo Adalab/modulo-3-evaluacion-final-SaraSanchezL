@@ -1,5 +1,5 @@
 import "../styles/Character.scss";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import invisibilityImg from "../images/harry-potter-capa-invisibilidad.jpg";
 
 const Character = (props) => {
@@ -29,6 +29,7 @@ const Character = (props) => {
           props.character.image === "" ? invisibilityImg : props.character.image
         }
         alt={`Foto de ${props.character.name}`}
+        title={`Imagen de ${props.character.name}`}
       />
       <p className="infoCharacter">{getInfoImg()}</p>
       <p className="infoCharacter">{props.character.name}</p>

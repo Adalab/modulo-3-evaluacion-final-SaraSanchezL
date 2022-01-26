@@ -17,27 +17,95 @@ function CharacterDetail(props) {
   const getSpicies = () => {
     if (props.character.species === "human") {
       return (
-        <span>
-          Humano - <FaUser className="speciesIcon" />
-        </span>
+        <p className="infoDetails">
+          Especie: Humano - <FaUser className="speciesIcon" />
+        </p>
       );
     } else if (props.character.species === "half-giant") {
       return (
-        <span>
-          Gigante - <GiGiant className="speciesIcon" />
-        </span>
+        <p className="infoDetails">
+          Especie: Gigante - <GiGiant className="speciesIcon" />
+        </p>
       );
     } else if (props.character.species === "ghost") {
       return (
-        <span>
-          Fantasma - <BiGhost className="speciesIcon" />
-        </span>
+        <p className="infoDetails">
+          Especie: Fantasma - <BiGhost className="speciesIcon" />
+        </p>
       );
     } else if (props.character.species === "werewolf") {
       return (
-        <span>
-          Licántropo - <GiWerewolf className="speciesIcon" />
-        </span>
+        <p className="infoDetails">
+          Especie: Licántropo - <GiWerewolf className="speciesIcon" />
+        </p>
+      );
+    }
+  };
+
+  const getHouse = () => {
+    if (props.character.house === "Gryffindor") {
+      return (
+        <p className="infoDetails">
+          Casa: {props.character.house}
+          <img
+            className="houseIcon"
+            src={gryffindorIcon}
+            alt="Icono de Gryffindor"
+            title="Icono de Gryffindor"
+          />
+        </p>
+      );
+    } else if (props.character.house === "Slytherin") {
+      return (
+        <p className="infoDetails">
+          Casa: {props.character.house}
+          <img
+            className="houseIcon"
+            src={slytherinIcon}
+            alt="Icono de Slytherin"
+            title="Icono de Slytherin"
+          />
+        </p>
+      );
+    } else if (props.character.house === "Hufflepuff") {
+      return (
+        <p className="infoDetails">
+          Casa: {props.character.house}
+          <img
+            className="houseIcon"
+            src={huffepuffIcon}
+            alt="Icono de Hufflepuff"
+            title="Icono de Hufflepuff"
+          />
+        </p>
+      );
+    } else if (props.character.house === "Ravenclaw") {
+      return (
+        <p className="infoDetails">
+          Casa: {props.character.house}
+          <img
+            className="houseIcon"
+            src={ravenclawIcon}
+            alt="Icono de Ravenclaw"
+            title="Icono de Ravenclaw"
+          />
+        </p>
+      );
+    }
+  };
+
+  const getStatus = () => {
+    if (props.character.status) {
+      return (
+        <p className="infoDetails">
+          Estatus: Vivo <FaHeartbeat className="statusIconAlive" />
+        </p>
+      );
+    } else {
+      return (
+        <p className="infoDetails">
+          Estatus: Muerto <GiDeadHead className="statusIconDeath" />
+        </p>
       );
     }
   };
@@ -46,48 +114,14 @@ function CharacterDetail(props) {
     return props.character.gender === "female" ? "Mujer" : " Hombre";
   };
 
-  const getHouseIcon = () => {
-    if (props.character.house === "Gryffindor") {
-      return (
-        <img className="houseIcon" src={gryffindorIcon} alt="Gryffindor Icon" />
-      );
-    } else if (props.character.house === "Slytherin") {
-      return (
-        <img className="houseIcon" src={slytherinIcon} alt="Slytherin Icon" />
-      );
-    } else if (props.character.house === "Hufflepuff") {
-      return (
-        <img className="houseIcon" src={huffepuffIcon} alt="Hufflepuff Icon" />
-      );
-    } else if (props.character.house === "Ravenclaw") {
-      return (
-        <img className="houseIcon" src={ravenclawIcon} alt="Ravenclaw Icon" />
-      );
-    }
-  };
-
-  const getStatusIcon = () => {
-    if (props.character.status) {
-      return (
-        <span className="statusIconAlive">
-          <FaHeartbeat />
-        </span>
-      );
-    } else {
-      return (
-        <span className="statusIconDeath">
-          <GiDeadHead />
-        </span>
-      );
-    }
-  };
-
   return (
     <section className="sectionDetail">
       <Link className="linkHome" to="/">
         Volver al inicio
       </Link>
+
       <h2 className="titleDetails">Detalle del Personaje</h2>
+
       <img
         className="imgDetail"
         src={
@@ -96,16 +130,19 @@ function CharacterDetail(props) {
             : props.character.image
         }
         alt={`Foto de ${props.character.name}`}
+        title={`Imagen de ${props.character.name}`}
       />
+
       <p className="infoDetails">{props.character.name}</p>
-      <p className="infoDetails">
-        Estatus: {props.character.status ? "Vivo" : "Muerto"} {getStatusIcon()}
-      </p>
-      <p className="infoDetails">Especie: {getSpicies()}</p>
+
+      {getSpicies()}
+
+      {getHouse()}
+
+      {getStatus()}
+
       <p className="infoDetails">Género: {getGender()}</p>
-      <p className="infoDetails">
-        Casa: {props.character.house} {getHouseIcon()}
-      </p>
+
       <p className="infoDetails">{props.character.alternateNames}</p>
     </section>
   );

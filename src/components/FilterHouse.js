@@ -15,7 +15,7 @@ const FilterHouse = (props) => {
         className="inputForm"
         name="house"
         id="house"
-        value={props.filterSelect}
+        value={props.filterHouse}
         onChange={handleSelect}
       >
         <option value="Gryffindor">Gryffindor</option>

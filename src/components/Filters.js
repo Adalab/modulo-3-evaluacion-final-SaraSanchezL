@@ -15,7 +15,7 @@ const Filters = (props) => {
       />
 
       <FilterHouse
-        filterSelect={props.filterSelect}
+        filterHouse={props.filterHouse}
         handleFilter={props.handleFilter}
       />
 

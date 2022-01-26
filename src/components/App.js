@@ -15,21 +15,21 @@ import MessageNotResults from "./MessageNotResults";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
-  const [filterSelect, setFilterSelect] = useState("Gryffindor");
+  const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const [filterGender, setFilterGender] = useState("all");
   const [filterSpecies, setFilterSpecies] = useState("any");
 
   useEffect(() => {
-    getApiData(filterSelect).then((response) => {
+    getApiData(filterHouse).then((response) => {
       setCharacters(response);
     });
-  }, [filterSelect]);
+  }, [filterHouse]);
 
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
     } else if (data.key === "house") {
-      setFilterSelect(data.value);
+      setFilterHouse(data.value);
     } else if (data.key === "gender") {
       setFilterGender(data.value);
     } else if (data.key === "species") {
@@ -46,7 +46,7 @@ function App() {
     .filter((character) =>
       character.name.toLowerCase().includes(filterName.toLowerCase())
     )
-    .filter((houseCharacter) => houseCharacter.house === filterSelect)
+    .filter((houseCharacter) => houseCharacter.house === filterHouse)
     .filter(
       (genderCharacter) =>
         filterGender === "all" || filterGender === genderCharacter.gender
@@ -70,7 +70,7 @@ function App() {
 
   const handleBtnReset = (ev) => {
     ev.preventDefault();
-    setFilterSelect("Gryffindor");
+    setFilterHouse("Gryffindor");
     setFilterName("");
     setFilterGender("all");
     setFilterSpecies("any");
@@ -90,7 +90,7 @@ function App() {
             <Filters
               filterName={filterName}
               handleFilter={handleFilter}
-              filterSelect={filterSelect}
+              filterHouse={filterHouse}
               filterGender={filterGender}
               filterSpecies={filterSpecies}
             />
