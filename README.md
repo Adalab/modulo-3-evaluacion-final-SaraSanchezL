@@ -3,7 +3,7 @@
 El ejercicio consiste en desarrollar una página web con un listado de personajes de Harry Potter, que
 podemos filtrar por el nombre del personaje. Vamos a usar React para realizarlo.
 
-## Para trabajar sobre este ejercicio se necesita Web Starter Kit de React.
+## Para trabajar sobre este ejercicio se necesita Starter Kit de React.
 
 1. Listado de personajes.
 
