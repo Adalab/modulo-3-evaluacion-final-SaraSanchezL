@@ -72,7 +72,7 @@ Y en el caso de que el usuario navegue a una URL inexistente debemos mostrar un 
    Un extra interesante sería que ordenáseis el listado de personajes alfabéticamente por nombre.
 
 4. Más filtros
-   Un extra interesante sería que añadáis más filtros para filtrar, por ejemplo por género.
+   Un extra interesante sería que añadáis más filtros para filtrar, por ejemplo por género. Se ha añadido además filtrado por especie.
 
 5. Boton Reset
    Un extra interesante sería añadir un boton de reset para que la página vuelva a su listado principal.
