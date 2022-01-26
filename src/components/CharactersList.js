@@ -11,7 +11,7 @@ const CharactersList = (props) => {
   });
 
   return (
-    <section>
+    <section className="section">
       <h2 className="titleResults">Lista de resultados</h2>
       <ul className="list">{character}</ul>
     </section>

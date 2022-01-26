@@ -3,15 +3,28 @@
   font-size: 20px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
+  margin: 15px;
+}
+
+.section {
+  width: 100vw;
 }
 
 .list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+  }
 }
 
 .eachLi {
   margin-bottom: 15px;
   background-color: gold;
   width: 300px;
+  margin: 20px;
 }

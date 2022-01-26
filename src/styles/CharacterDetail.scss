@@ -1,38 +1,40 @@
-.titleDetails {
-  color: goldenrod;
-  font-size: 25px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.imgDetail {
-  width: 300px;
-  height: 300px;
-}
-
-.infoDetails {
-  color: goldenrod;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: gray;
-  width: fit-content;
-  text-align: center;
+.sectionDetail {
+  border: 2px lightcoral dotted;
+  background-color: lightskyblue;
+  padding: 10px;
 }
 
 .linkHome {
   color: red;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
-  padding: 10px;
+  padding: 15px;
 }
 
-.sectionDetail {
-  border: 2px lightcoral dotted;
-  background-color: lightskyblue;
+.titleDetails {
+  color: darkblue;
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 15px;
+}
+
+.imgDetail {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+.infoDetails {
+  color: darkblue;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: fit-content;
+  margin: 20px;
 }
 
 .houseIcon {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
 }
 
 .statusIconAlive {

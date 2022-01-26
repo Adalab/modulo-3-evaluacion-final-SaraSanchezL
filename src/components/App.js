@@ -1,8 +1,6 @@
 import "../styles/App.scss";
 import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-//Images
-import Logo from "../images/logoHP.png";
 //Components
 import getApiData from "../services/api";
 import CharactersList from "./CharactersList";
@@ -64,9 +62,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="header">
-        <img src={Logo} alt="Harry Potter Logo" className="logoHeader" />
-      </header>
+      <header className="header"></header>
 
       <main className="main">
         <Switch>
