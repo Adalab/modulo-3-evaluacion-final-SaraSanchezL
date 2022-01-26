@@ -7,8 +7,11 @@ const FilterName = (props) => {
   };
   return (
     <>
-      <label htmlFor="name">Buscar por Nombre:</label>
+      <label className="labelForm" htmlFor="name">
+        Buscar por Nombre:
+      </label>
       <input
+        className="inputForm"
         type="text"
         name="name"
         id="name"

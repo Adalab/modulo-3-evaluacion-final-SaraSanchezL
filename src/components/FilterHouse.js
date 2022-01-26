@@ -8,8 +8,11 @@ const FilterHouse = (props) => {
 
   return (
     <>
-      <label htmlFor="house">Selecciona Casa:</label>
+      <label className="labelForm" htmlFor="house">
+        Selecciona Casa:
+      </label>
       <select
+        className="inputForm"
         name="house"
         id="house"
         value={props.filterSelect}

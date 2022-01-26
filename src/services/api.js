@@ -4,9 +4,9 @@ const getApiData = (filterSelect) => {
   return fetch(`http://hp-api.herokuapp.com/api/characters/house/${filterSelect}`)
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.map((character) => {
+      const cleanData = data.map((character, index) => {
         return {
-          id: `${character.house + character.name}`,
+          id: `${index + character.house + character.name}`,
           name: character.name,
           image: character.image,
           species: character.species,

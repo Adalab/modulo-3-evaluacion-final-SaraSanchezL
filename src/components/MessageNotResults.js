@@ -4,7 +4,7 @@ const MessageNotResults = (props) => {
       return `No hay ningún personaje que coincida con la palabra ${props.filterName}.`;
     }
   };
-  return <div>{renderMessage()}</div>;
+  return <p className="textNotFound">{renderMessage()}</p>;
 };
 
 export default MessageNotResults;

@@ -1,0 +1,43 @@
+.titleDetails {
+  color: goldenrod;
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.imgDetail {
+  width: 300px;
+  height: 300px;
+}
+
+.infoDetails {
+  color: goldenrod;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+  width: max-content;
+}
+
+.linkHome {
+  color: red;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+}
+
+.sectionDetail {
+  border: 2px lightcoral dotted;
+  background-color: lightskyblue;
+}
+
+.houseIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.statusIconAlive {
+  color: red;
+}
+
+.statusIconDeath {
+  color: black;
+}

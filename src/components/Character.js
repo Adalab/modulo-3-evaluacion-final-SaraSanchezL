@@ -1,4 +1,8 @@
+import "../styles/Character.scss";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import invisibilityImg from "../images/harry-potter-capa-invisibilidad.jpg";
+
+//`https://via.placeholder.com/300x300/000000/ffffff/?text=${props.character.name}`
 
 const Character = (props) => {
   const getSpicies = () => {
@@ -13,19 +17,27 @@ const Character = (props) => {
     }
   };
 
+  const getInfoImg = () => {
+    if (props.character.image === "") {
+      return "Este personaje está usando la capa de invisibilidad.";
+    }
+  };
+
   return (
     <>
       <img
+        className="img"
         src={
-          props.character.image === ""
-            ? `https://via.placeholder.com/300x300/000000/ffffff/?text=${props.character.name}`
-            : props.character.image
+          props.character.image === "" ? invisibilityImg : props.character.image
         }
         alt={`Foto de ${props.character.name}`}
       />
-      <p>{props.character.name}</p>
-      <p>Especie: {getSpicies()}</p>
-      <Link to={`/character/${props.character.id}`}>Más detalles</Link>
+      <p className="infoCharacter">{getInfoImg()}</p>
+      <p className="infoCharacter">{props.character.name}</p>
+      <p className="infoCharacter">Especie: {getSpicies()}</p>
+      <Link className="link" to={`/character/${props.character.id}`}>
+        Más detalles
+      </Link>
     </>
   );
 };

@@ -1,5 +1,9 @@
 const DetailsNotFound = () => {
-  return <p>Detalles no encontrados, el personaje que buscas no existe.</p>;
+  return (
+    <p className="textNotFound">
+      Detalles no encontrados, el personaje que buscas no existe.
+    </p>
+  );
 };
 
 export default DetailsNotFound;

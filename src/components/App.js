@@ -15,6 +15,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
   const [filterSelect, setFilterSelect] = useState("Gryffindor");
+  const [filterGender, setFilterGender] = useState("all");
 
   useEffect(() => {
     getApiData(filterSelect).then((response) => {
@@ -28,12 +29,18 @@ function App() {
       setFilterName(data.value);
     } else if (data.key === "house") {
       setFilterSelect(data.value);
+    } else if (data.key === "gender") {
+      setFilterGender(data.value);
     }
   };
 
   const filteredCharacter = characters
-    .filter((character) => character.name.toLowerCase().includes(filterName) || character.gender.toLowerCase().includes(filterName))
-    .filter((houseCharacter) => houseCharacter.house === filterSelect);
+    .filter((character) => character.name.toLowerCase().includes(filterName))
+    .filter((houseCharacter) => houseCharacter.house === filterSelect)
+    .filter(
+      (genderCharacter) =>
+        filterGender === "all" || filterGender === genderCharacter.gender
+    );
 
   const renderCharacterDetail = (props) => {
     const routeID = props.match.params.characterId;
@@ -51,24 +58,28 @@ function App() {
     ev.preventDefault();
     setFilterSelect("Gryffindor");
     setFilterName("");
+    setFilterGender("all");
   };
 
   return (
     <div className="App">
-      <header>
+      <header className="header">
         <img src={Logo} alt="Harry Potter Logo" className="logoHeader" />
       </header>
 
-      <main>
+      <main className="main">
         <Switch>
           <Route path="/" exact>
-            <button onClick={handleBtnReset}>Reset</button>
-
             <Filters
               filterName={filterName}
               handleFilter={handleFilter}
               filterSelect={filterSelect}
+              filterGender={filterGender}
             />
+
+            <button className="btnReset" onClick={handleBtnReset}>
+              Reset
+            </button>
 
             <CharactersList characters={filteredCharacter} />
             <MessageNotResults

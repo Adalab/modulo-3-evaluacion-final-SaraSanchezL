@@ -1,6 +1,34 @@
-/* Mis estilos para App */
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
 
 .logoHeader {
   width: 600px;
   height: 200px;
+}
+
+.header {
+  background-color: black;
+}
+
+.main {
+  background-color: lavender;
+}
+
+.btnReset {
+  background-color: lightskyblue;
+  color: lightcoral;
+  width: 60px;
+  height: 30px;
+  border-radius: 20%;
+  margin: 10px;
+}
+
+.textNotFound {
+  color: darkslategrey;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
