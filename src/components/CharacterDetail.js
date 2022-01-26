@@ -1,24 +1,47 @@
 import "../styles/CharacterDetail.scss";
 import { Link } from "react-router-dom";
+//Images
 import gryffindorIcon from "../images/gryffindorIcon.jpg";
 import slytherinIcon from "../images/slytherinIcon.jpg";
 import ravenclawIcon from "../images/ravenclawIcon.jpg";
 import huffepuffIcon from "../images/hufflepuffIcon.jpg";
+// React Icons
 import { FaHeartbeat } from "react-icons/fa";
 import { GiDeadHead } from "react-icons/gi";
+import { GiGiant } from "react-icons/gi";
+import { BiGhost } from "react-icons/bi";
+import { GiWerewolf } from "react-icons/gi";
+import { FaUser } from "react-icons/fa";
 
 function CharacterDetail(props) {
   const getSpicies = () => {
     if (props.character.species === "human") {
-      return "Humano";
+      return (
+        <span>
+          Humano - <FaUser className="speciesIcon" />
+        </span>
+      );
     } else if (props.character.species === "half-giant") {
-      return "Gigante";
+      return (
+        <span>
+          Gigante - <GiGiant className="speciesIcon" />
+        </span>
+      );
     } else if (props.character.species === "ghost") {
-      return "Fantasma";
+      return (
+        <span>
+          Fantasma - <BiGhost className="speciesIcon" />
+        </span>
+      );
     } else if (props.character.species === "werewolf") {
-      return "Licántropo";
+      return (
+        <span>
+          Licántropo - <GiWerewolf className="speciesIcon" />
+        </span>
+      );
     }
   };
+
   const getGender = () => {
     return props.character.gender === "female" ? "Mujer" : " Hombre";
   };
@@ -62,7 +85,6 @@ function CharacterDetail(props) {
   return (
     <section className="sectionDetail">
       <Link className="linkHome" to="/">
-        {" "}
         Volver al inicio
       </Link>
       <h2 className="titleDetails">Detalle del Personaje</h2>

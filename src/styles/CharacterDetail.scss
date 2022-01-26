@@ -14,7 +14,8 @@
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: gray;
-  width: max-content;
+  width: fit-content;
+  text-align: center;
 }
 
 .linkHome {
@@ -30,8 +31,8 @@
 }
 
 .houseIcon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 .statusIconAlive {
@@ -39,5 +40,9 @@
 }
 
 .statusIconDeath {
+  color: black;
+}
+
+.speciesIcon {
   color: black;
 }

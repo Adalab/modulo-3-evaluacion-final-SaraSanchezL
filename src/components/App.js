@@ -20,7 +20,6 @@ function App() {
   useEffect(() => {
     getApiData(filterSelect).then((response) => {
       setCharacters(response);
-      console.log(response);
     });
   }, [filterSelect]);
 
@@ -35,7 +34,9 @@ function App() {
   };
 
   const filteredCharacter = characters
-    .filter((character) => character.name.toLowerCase().includes(filterName))
+    .filter((character) =>
+      character.name.toLowerCase().includes(filterName.toLowerCase())
+    )
     .filter((houseCharacter) => houseCharacter.house === filterSelect)
     .filter(
       (genderCharacter) =>

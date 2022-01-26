@@ -2,8 +2,6 @@ import "../styles/Character.scss";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import invisibilityImg from "../images/harry-potter-capa-invisibilidad.jpg";
 
-//`https://via.placeholder.com/300x300/000000/ffffff/?text=${props.character.name}`
-
 const Character = (props) => {
   const getSpicies = () => {
     if (props.character.species === "human") {
