@@ -116,7 +116,7 @@ function CharacterDetail(props) {
 
   return (
     <section className="sectionDetail">
-      <Link className="linkHome" to="/">
+      <Link className="linkHome" to="/" title="Volver al inicio">
         Volver al inicio
       </Link>
 

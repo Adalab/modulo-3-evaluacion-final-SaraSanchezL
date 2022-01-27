@@ -25,6 +25,13 @@ function App() {
     });
   }, [filterHouse]);
 
+  //Func ordenar array characters alfabéticamente
+  function SortArray(x, y) {
+    return x.name.localeCompare(y.name);
+  }
+  characters.sort(SortArray);
+
+  //Func Manejadora Filtros
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
@@ -36,11 +43,6 @@ function App() {
       setFilterSpecies(data.value);
     }
   };
-
-  function SortArray(x, y) {
-    return x.name.localeCompare(y.name);
-  }
-  characters.sort(SortArray);
 
   const filteredCharacter = characters
     .filter((character) =>
@@ -56,6 +58,7 @@ function App() {
         filterSpecies === "any" || filterSpecies === specieCharacter.species
     );
 
+  //Func obtener ruta para renderizar detalles
   const renderCharacterDetail = (props) => {
     const routeID = props.match.params.characterId;
     const foundCharacter = characters.find(
@@ -88,15 +91,15 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Filters
-              filterName={filterName}
               handleFilter={handleFilter}
+              filterName={filterName}
               filterHouse={filterHouse}
               filterGender={filterGender}
               filterSpecies={filterSpecies}
             />
 
             <button className="btnReset" onClick={handleBtnReset}>
-              Reset
+              Reiniciar Búsqueda
             </button>
 
             <CharactersList characters={filteredCharacter} />

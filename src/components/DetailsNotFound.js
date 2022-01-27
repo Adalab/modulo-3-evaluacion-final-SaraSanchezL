@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const DetailsNotFound = () => {
   return (
     <div>
-      <Link className="linkHome" to="/">
+      <Link className="linkHome" to="/" title="Volver al inicio">
         Volver al inicio
       </Link>
       <p className="textNotFound">
