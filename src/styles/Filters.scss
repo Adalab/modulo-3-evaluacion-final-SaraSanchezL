@@ -5,6 +5,13 @@
   width: 100vw;
 }
 
+@media all and (max-width: 768px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .labelForm {
   padding: 5px;
 }
