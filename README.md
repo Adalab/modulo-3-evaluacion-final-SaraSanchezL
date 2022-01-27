@@ -47,7 +47,7 @@ Vamos a implementar una nueva funcionalidad: al hacer clic sobre la tarjeta de u
 
 7. Detallitos de calidad
 
-- Como nos gusta cuidar la semántica, el campo de texto debe estar recubierto por una etiqueta form.
+- El campo de texto debe estar recubierto por una etiqueta form.
 - Si estando en el campo de filtrado pulsamos intro debéis impedir que el navegador navegue o cambie la ruta sin querer.
 - Si se busca por un texto por ejemplo "XXX" y no hay ningún personaje que coincida con dicho texto se debe mostrar un mensaje del tipo "No hay ningún personaje que coincida con la palabra XXX".
 - El filtro debe filtrar independientemente de que la usuaria introduzca el texto en mayúsuclas o minúsculas.
@@ -69,10 +69,10 @@ La URL del detalle de personaje sea compatible, es decir, que si visitamos esa U
 Y en el caso de que el usuario navegue a una URL inexistente debemos mostrar un mensaje.
 
 3. Ordenación
-   Un extra interesante sería que ordenáseis el listado de personajes alfabéticamente por nombre.
+   Ordenar el listado de personajes alfabéticamente por nombre.
 
 4. Más filtros
-   Un extra interesante sería que añadáis más filtros para filtrar, por ejemplo por género. Se ha añadido además filtrado por especie.
+   Añadir más filtros para filtrar, por ejemplo por género. Se ha añadido además filtrado por especie.
 
 5. Boton Reset
-   Un extra interesante sería añadir un boton de reset para que la página vuelva a su listado principal.
+   Añadir un boton de reset para que la página vuelva a su listado principal.
