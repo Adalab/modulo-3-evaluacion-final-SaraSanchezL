@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import invisibilityImg from "../images/harry-potter-capa-invisibilidad.jpg";
 
 const Character = (props) => {
-  const getSpicies = () => {
+  const getSpecies = () => {
     if (props.character.species === "human") {
       return "Humano";
     } else if (props.character.species === "half-giant") {
@@ -35,7 +35,7 @@ const Character = (props) => {
       />
       <p className="infoCharacter">{getInfoImg()}</p>
       <p className="infoCharacter">{props.character.name}</p>
-      <p className="infoCharacter">Especie: {getSpicies()}</p>
+      <p className="infoCharacter">Especie: {getSpecies()}</p>
       <Link
         className="link"
         to={`/character/${props.character.id}`}

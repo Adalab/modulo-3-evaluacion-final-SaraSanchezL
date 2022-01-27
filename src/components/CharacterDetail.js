@@ -14,7 +14,7 @@ import { GiWerewolf } from "react-icons/gi";
 import { FaUser } from "react-icons/fa";
 
 function CharacterDetail(props) {
-  const getSpicies = () => {
+  const getSpecies = () => {
     if (props.character.species === "human") {
       return (
         <p className="infoDetails">
@@ -135,7 +135,7 @@ function CharacterDetail(props) {
 
       <p className="infoDetails">{props.character.name}</p>
 
-      {getSpicies()}
+      {getSpecies()}
 
       {getHouse()}
 
