@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a2808945.css",
+    "main.js": "./static/js/main.c678f480.js",
+    "static/media/harry-potter-capa-invisibilidad.jpg": "./static/media/harry-potter-capa-invisibilidad.1a455676a25abef351fb.jpg",
+    "static/media/logo-hp.jpg": "./static/media/logo-hp.0b8edf24dd93aded55da.jpg",
+    "static/media/HARRYP.TTF": "./static/media/HARRYP.a65869c0c1a4b3d4fcfc.TTF",
+    "static/media/hufflepuffIcon.jpg": "./static/media/hufflepuffIcon.4fb96ea0d64f860d1e74.jpg",
+    "static/media/gryffindorIcon.jpg": "./static/media/gryffindorIcon.93d59342dbef6cab9737.jpg",
+    "static/media/slytherinIcon.jpg": "./static/media/slytherinIcon.b7499947fe65cc5dd642.jpg",
+    "static/media/ravenclawIcon.jpg": "./static/media/ravenclawIcon.66fd8dec79ff13bce8bb.jpg",
+    "index.html": "./index.html",
+    "main.a2808945.css.map": "./static/css/main.a2808945.css.map",
+    "main.c678f480.js.map": "./static/js/main.c678f480.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2808945.css",
+    "static/js/main.c678f480.js"
+  ]
+}
