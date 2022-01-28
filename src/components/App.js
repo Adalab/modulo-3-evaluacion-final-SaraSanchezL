@@ -18,6 +18,7 @@ function App() {
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const [filterGender, setFilterGender] = useState("all");
   const [filterSpecies, setFilterSpecies] = useState("any");
+  const [filterHogwartsStudent, setFilterHogwartsStudent ] = useState(false);
 
   useEffect(() => {
     getApiData(filterHouse).then((response) => {
@@ -41,6 +42,8 @@ function App() {
       setFilterGender(data.value);
     } else if (data.key === "species") {
       setFilterSpecies(data.value);
+    } else if (data.key === "student") {
+      setFilterHogwartsStudent(data.value)
     }
   };
 
@@ -56,7 +59,8 @@ function App() {
     .filter(
       (specieCharacter) =>
         filterSpecies === "any" || filterSpecies === specieCharacter.species
-    );
+    )
+    .filter((eachCharacter ) => eachCharacter.hogwartsStudent === filterHogwartsStudent);
 
   //Func obtener ruta para renderizar detalles
   const renderCharacterDetail = (props) => {
@@ -96,6 +100,7 @@ function App() {
               filterHouse={filterHouse}
               filterGender={filterGender}
               filterSpecies={filterSpecies}
+              filterHogwartsStudent={filterHogwartsStudent}
             />
 
             <button className="btnReset" onClick={handleBtnReset}>

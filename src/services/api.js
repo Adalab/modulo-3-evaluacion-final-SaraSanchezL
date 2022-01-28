@@ -14,6 +14,7 @@ const getApiData = (filterHouse) => {
           status: character.alive,
           gender: character.gender,
           alternateNames: character.alternate_names,
+          hogwartsStudent: character.hogwartsStudent
         };
       });
       return cleanData;

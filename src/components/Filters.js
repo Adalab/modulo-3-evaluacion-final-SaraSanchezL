@@ -3,6 +3,7 @@ import FilterName from "./FilterName";
 import FilterHouse from "./FilterHouse";
 import FilterGender from "./FilterGender";
 import FilterSpecies from "./FilterSpecies";
+import HogwartsStudent from "./HogwartsStudent ";
 
 const Filters = (props) => {
   const handleForm = (ev) => ev.preventDefault();
@@ -26,6 +27,11 @@ const Filters = (props) => {
 
       <FilterSpecies
         filterSpecies={props.filterSpecies}
+        handleFilter={props.handleFilter}
+      />
+
+      <HogwartsStudent
+        filterHogwartsStudent={props.filterHogwartsStudent}
         handleFilter={props.handleFilter}
       />
     </form>
