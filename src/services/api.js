@@ -6,7 +6,7 @@ const getApiData = (filterHouse) => {
     .then((data) => {
       const cleanData = data.map((character, index) => {
         return {
-          id: `${index + character.house + character.name}`,
+          id: index,
           name: character.name,
           image: character.image,
           species: character.species,

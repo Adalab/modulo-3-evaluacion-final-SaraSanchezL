@@ -18,7 +18,10 @@ const Character = (props) => {
   const getInfoImg = () => {
     if (props.character.image === "" && props.character.status) {
       return "Este personaje está usando la capa de invisibilidad.";
-    } else if (props.character.image === "" && props.character.status === false) {
+    } else if (
+      props.character.image === "" &&
+      props.character.status === false
+    ) {
       return "Este personaje estaba usando la capa de invisibilidad.";
     }
   };
@@ -38,7 +41,7 @@ const Character = (props) => {
       <p className="infoCharacter">Especie: {getSpecies()}</p>
       <Link
         className="link"
-        to={`/character/${props.character.id}`}
+        to={`/character/${props.character.house}/${props.character.id}`}
         title="Más detalles"
       >
         Más detalles
