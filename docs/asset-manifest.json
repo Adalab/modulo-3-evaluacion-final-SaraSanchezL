@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.a2808945.css",
-    "main.js": "./static/js/main.c678f480.js",
+    "main.css": "./static/css/main.3aba4ea3.css",
+    "main.js": "./static/js/main.e4a44b38.js",
     "static/media/harry-potter-capa-invisibilidad.jpg": "./static/media/harry-potter-capa-invisibilidad.1a455676a25abef351fb.jpg",
     "static/media/logo-hp.jpg": "./static/media/logo-hp.0b8edf24dd93aded55da.jpg",
     "static/media/HARRYP.TTF": "./static/media/HARRYP.a65869c0c1a4b3d4fcfc.TTF",
@@ -10,11 +10,11 @@
     "static/media/slytherinIcon.jpg": "./static/media/slytherinIcon.b7499947fe65cc5dd642.jpg",
     "static/media/ravenclawIcon.jpg": "./static/media/ravenclawIcon.66fd8dec79ff13bce8bb.jpg",
     "index.html": "./index.html",
-    "main.a2808945.css.map": "./static/css/main.a2808945.css.map",
-    "main.c678f480.js.map": "./static/js/main.c678f480.js.map"
+    "main.3aba4ea3.css.map": "./static/css/main.3aba4ea3.css.map",
+    "main.e4a44b38.js.map": "./static/js/main.e4a44b38.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2808945.css",
-    "static/js/main.c678f480.js"
+    "static/css/main.3aba4ea3.css",
+    "static/js/main.e4a44b38.js"
   ]
 }
