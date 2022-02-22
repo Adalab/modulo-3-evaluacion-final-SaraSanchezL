@@ -1,9 +1,17 @@
-# Página web búsqueda personajes Harry Potter con REACT.
+# Página web de búsqueda personajes Harry Potter realizada con REACT.
 
-El ejercicio consiste en desarrollar una página web con un listado de personajes de Harry Potter, que
-podemos filtrar por el nombre del personaje,. Vamos a usar React para realizarlo.
+Las funciones principales de la aplicación:
+
+- La petición a API según casa seleccionada (por defecto será Gryffindor).
+- Pintar la lista de personajes en pantalla, con foto, nombre, especie y link para más detalles.
+- Filtrado por nombre, casa, género, especie o si es estudiante o no.
+- Botones para ordenar alfabéticamente y resetear la búsqueda.
+- Uso de rutas para crear una página con detalles del personaje seleccionado.
+- Creación de distintos componentes para cada sección de la aplicación.
 
 ## Para trabajar sobre este ejercicio se necesita Starter Kit de React.
+
+#### Descripción
 
 1. Listado de personajes.
 
