@@ -12,31 +12,32 @@ import { GiGiant } from "react-icons/gi";
 import { RiGhostFill } from "react-icons/ri";
 import { GiWerewolf } from "react-icons/gi";
 import { FaUser } from "react-icons/fa";
+import {BsStars} from "react-icons/bs";
 
 function CharacterDetail(props) {
   const getSpecies = () => {
     if (props.character.species === "human") {
       return (
         <p className="infoDetails">
-          Especie: Humano - <FaUser className="speciesIcon" />
+          Especie: Humano <FaUser className="speciesIcon" />
         </p>
       );
     } else if (props.character.species === "half-giant") {
       return (
         <p className="infoDetails">
-          Especie: Gigante - <GiGiant className="speciesIcon" />
+          Especie: Gigante <GiGiant className="speciesIcon" />
         </p>
       );
     } else if (props.character.species === "ghost") {
       return (
         <p className="infoDetails">
-          Especie: Fantasma - <RiGhostFill className="speciesIcon" />
+          Especie: Fantasma <RiGhostFill className="speciesIcon" />
         </p>
       );
     } else if (props.character.species === "werewolf") {
       return (
         <p className="infoDetails">
-          Especie: Licántropo - <GiWerewolf className="speciesIcon" />
+          Especie: Licántropo <GiWerewolf className="speciesIcon" />
         </p>
       );
     }
@@ -133,7 +134,7 @@ function CharacterDetail(props) {
         title={`Imagen de ${props.character.name}`}
       />
 
-      <p className="infoDetails">{props.character.name}</p>
+      <p className="infoDetails"><BsStars/> {props.character.name}</p>
 
       {getSpecies()}
 

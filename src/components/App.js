@@ -19,7 +19,7 @@ function App() {
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
   const [filterGender, setFilterGender] = useState("all");
   const [filterSpecies, setFilterSpecies] = useState("any");
-  const [filterHogwartsStudent, setFilterHogwartsStudent] = useState(false);
+  const [filterHogwartsStudent, setFilterHogwartsStudent] = useState(true);
   const [order, setOrder] = useState(false);
 
   useEffect(() => {

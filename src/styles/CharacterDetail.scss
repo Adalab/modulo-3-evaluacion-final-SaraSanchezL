@@ -1,6 +1,8 @@
 .sectionDetail {
   border: 2px lightcoral dotted;
-  background-color: lightskyblue;
+  background-image: url("../images/wallpDetails.jpg");
+  background-position: right;
+  background-size: contain;
   padding: 10px;
 }
 
@@ -26,7 +28,7 @@
 }
 
 .infoDetails {
-  color: darkblue;
+  color: gold;
   font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

@@ -1,6 +1,9 @@
 .titleResults {
   color: goldenrod;
-  font-size: 30px;
+  font-size: 50px;
+  background-color: lightgrey;
+  width: 280px;
+  border-radius: 50%;
   font-family: "HARRYP", sans-serif;
   margin: 15px;
 }
@@ -23,7 +26,9 @@
 
 .eachLi {
   margin-bottom: 15px;
-  background-color: gold;
+  background-image: url("../images/wallpCharacter.jpg");
+  background-position: center;
+  background-size: cover;
   width: 300px;
   margin: 20px;
 }

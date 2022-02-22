@@ -1,7 +1,7 @@
-# Evaluación Final Módulo 3
+# Página web búsqueda personajes Harry Potter con REACT.
 
 El ejercicio consiste en desarrollar una página web con un listado de personajes de Harry Potter, que
-podemos filtrar por el nombre del personaje. Vamos a usar React para realizarlo.
+podemos filtrar por el nombre del personaje,. Vamos a usar React para realizarlo.
 
 ## Para trabajar sobre este ejercicio se necesita Starter Kit de React.
 
